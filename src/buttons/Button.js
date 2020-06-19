@@ -21,6 +21,8 @@ const defaultLoadingProps = (type, theme) => ({
 });
 
 class Button extends Component {
+  this.viewComponentRef = React.createRef();
+
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
     if (linearGradientProps && !global.Expo && !ViewComponent) {
@@ -115,6 +117,7 @@ class Button extends Component {
         >
           <ViewComponent
             {...linearGradientProps}
+            ref={this.viewComponentRef}
             style={StyleSheet.flatten([
               styles.button(type, theme),
               buttonStyle,
