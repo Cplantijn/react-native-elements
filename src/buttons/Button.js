@@ -21,7 +21,7 @@ const defaultLoadingProps = (type, theme) => ({
 });
 
 class Button extends Component {
-  this.viewComponentRef = React.createRef();
+  viewComponentRef = React.createRef();
 
   componentDidMount() {
     const { linearGradientProps, ViewComponent } = this.props;
