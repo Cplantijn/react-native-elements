@@ -124,6 +124,7 @@ class Button extends Component {
               disabled && styles.disabled(type, theme),
               disabled && disabledStyle,
             ])}
+            collapsable={false}
           >
             {loading && (
               <ActivityIndicator
